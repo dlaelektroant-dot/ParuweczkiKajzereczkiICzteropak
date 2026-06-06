@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kury</title>
+<style>
+body{
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+    font-family:Arial,sans-serif;
+}
+button{
+    font-size:32px;
+    padding:20px 40px;
+    cursor:pointer;
+}
+video{
+    display:none;
+    width:100vw;
+    height:100vh;
+    object-fit:cover;
+}
+</style>
+</head>
+<body>
+
+<button id="start">START</button>
+
+<video id="film" autoplay controls>
+    <source src="kury.mp4" type="video/mp4">
+</video>
+
+<script>
+document.getElementById("start").onclick = function() {
+    document.getElementById("start").style.display = "none";
+
+    const film = document.getElementById("film");
+    film.style.display = "block";
+    film.play();
+};
+</script>
+
+</body>
+</html>
